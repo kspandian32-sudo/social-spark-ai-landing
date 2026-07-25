@@ -64,11 +64,16 @@ const LandingPage = () => {
           <p className="text-xl text-slate-600 mb-10 max-w-2xl mx-auto leading-relaxed">
             Generate 30 days of highly engaging, narrative-driven social media content directly inside your WordPress dashboard in under 2 minutes.
           </p>
-          <a href={FIRM_DETAILS.paymentLink} className="inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-            Get the Plugin Now — ₹999
-          </a>
-          <p className="mt-4 text-sm text-slate-500 flex items-center justify-center gap-2">
-            <ShieldCheck className="w-4 h-4 text-green-500" /> Secure payment processing via Razorpay
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
+            <a href={FIRM_DETAILS.paymentLink} className="inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1 w-full sm:w-auto">
+              Get PRO Version — ₹999
+            </a>
+            <a href="/social-spark-ai-free.zip" className="inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-slate-700 bg-white border-2 border-slate-200 rounded-lg hover:border-slate-300 hover:bg-slate-50 transition-all shadow-sm w-full sm:w-auto">
+              Download Free Version
+            </a>
+          </div>
+          <p className="mt-6 text-sm text-slate-500 flex items-center justify-center gap-2">
+            <ShieldCheck className="w-4 h-4 text-green-500" /> PRO payments secured via Razorpay
           </p>
         </div>
       </section>
@@ -97,6 +102,45 @@ const LandingPage = () => {
               </div>
               <h3 className="text-xl font-bold mb-3">Storytelling AI</h3>
               <p className="text-slate-600">Our custom AI pipeline uses proven marketing psychology and narrative structures to convert readers.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Comparison */}
+      <section className="py-20 bg-slate-50 border-t border-slate-200">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-slate-900">Choose Your Plan</h2>
+            <p className="text-slate-600 mt-4">Start for free, or unlock the full storytelling engine.</p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {/* Free Tier */}
+            <div className="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm">
+              <h3 className="text-2xl font-bold text-slate-900 mb-2">Social Spark Free</h3>
+              <p className="text-3xl font-extrabold text-slate-900 mb-6">₹0 <span className="text-lg text-slate-500 font-normal">forever</span></p>
+              <ul className="space-y-4 mb-8">
+                <li className="flex items-center gap-3"><CheckCircle className="w-5 h-5 text-green-500" /> Basic 1-paragraph outputs</li>
+                <li className="flex items-center gap-3"><CheckCircle className="w-5 h-5 text-green-500" /> Native WordPress Integration</li>
+                <li className="flex items-center gap-3 text-slate-400"><span className="line-through">Storytelling Architecture</span></li>
+                <li className="flex items-center gap-3 text-slate-400"><span className="line-through">Epiphany Bridge Framework</span></li>
+              </ul>
+              <a href="/social-spark-ai-free.zip" className="block w-full py-3 px-4 bg-slate-100 text-slate-700 font-bold text-center rounded-lg hover:bg-slate-200 transition-colors">Download Free Plugin</a>
+            </div>
+
+            {/* Pro Tier */}
+            <div className="bg-blue-600 rounded-2xl p-8 border border-blue-700 shadow-xl transform md:-translate-y-4 relative">
+              <div className="absolute top-0 right-8 transform -translate-y-1/2 bg-gradient-to-r from-orange-400 to-pink-500 text-white px-3 py-1 rounded-full text-sm font-bold shadow-lg">RECOMMENDED</div>
+              <h3 className="text-2xl font-bold text-white mb-2">Social Spark PRO</h3>
+              <p className="text-3xl font-extrabold text-white mb-6">₹999 <span className="text-lg text-blue-200 font-normal">one-time</span></p>
+              <ul className="space-y-4 mb-8 text-white">
+                <li className="flex items-center gap-3"><CheckCircle className="w-5 h-5 text-green-400" /> 3-4 Paragraph Long-Form Content</li>
+                <li className="flex items-center gap-3"><CheckCircle className="w-5 h-5 text-green-400" /> Native WordPress Integration</li>
+                <li className="flex items-center gap-3"><CheckCircle className="w-5 h-5 text-green-400" /> Storytelling Architecture</li>
+                <li className="flex items-center gap-3"><CheckCircle className="w-5 h-5 text-green-400" /> Epiphany Bridge Framework</li>
+              </ul>
+              <a href={FIRM_DETAILS.paymentLink} className="block w-full py-3 px-4 bg-white text-blue-600 font-bold text-center rounded-lg hover:bg-slate-50 transition-colors shadow-md">Get PRO Version</a>
             </div>
           </div>
         </div>
