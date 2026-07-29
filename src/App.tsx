@@ -263,7 +263,7 @@ const Success = () => (
         Your payment has been successfully processed. Click the button below to download your premium plugin file.
       </p>
       <a 
-        href="https://drive.google.com/file/d/1lM-pdhORdA76Sky4lTYW1PUNfqSyWztf/view?usp=sharing" 
+        href="https://drive.google.com/uc?export=download&id=1lM-pdhORdA76Sky4lTYW1PUNfqSyWztf" 
         target="_blank"
         rel="noreferrer"
         className="inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1"
