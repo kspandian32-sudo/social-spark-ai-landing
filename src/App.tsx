@@ -252,6 +252,39 @@ const Contact = () => (
   </PageWrapper>
 );
 
+const Success = () => (
+  <PageWrapper title="Payment Successful! 🎉">
+    <div className="text-center py-8">
+      <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+        <CheckCircle className="w-10 h-10 text-green-600" />
+      </div>
+      <h2 className="text-2xl font-bold text-slate-900 mb-4">Welcome to Social Spark AI PRO</h2>
+      <p className="text-lg text-slate-600 mb-8 max-w-xl mx-auto">
+        Your payment has been successfully processed. Click the button below to download your premium plugin file.
+      </p>
+      <a 
+        href="https://drive.google.com/file/d/1lM-pdhORdA76Sky4lTYW1PUNfqSyWztf/view?usp=sharing" 
+        target="_blank"
+        rel="noreferrer"
+        className="inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+      >
+        Download PRO Plugin (.zip)
+      </a>
+      
+      <div className="mt-12 text-left bg-slate-50 p-6 rounded-xl border border-slate-200">
+        <h3 className="font-bold text-lg mb-4 text-slate-900">Next Steps (Installation):</h3>
+        <ol className="list-decimal list-inside space-y-3 text-slate-700">
+          <li>Download the zip file from the Google Drive link above.</li>
+          <li>Extract/open the zip file on your computer.</li>
+          <li>Open the <strong>INSTALLATION_GUIDE.txt</strong> file inside.</li>
+          <li>Follow the step-by-step instructions to upload and activate the plugin on your WordPress site.</li>
+        </ol>
+        <p className="mt-6 text-sm text-slate-500">Need help? Email us at {FIRM_DETAILS.email}</p>
+      </div>
+    </div>
+  </PageWrapper>
+);
+
 export default function App() {
   return (
     <Router>
@@ -265,6 +298,7 @@ export default function App() {
             <Route path="/refund" element={<RefundPolicy />} />
             <Route path="/shipping" element={<ShippingPolicy />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/success" element={<Success />} />
           </Routes>
         </main>
         <Footer />
